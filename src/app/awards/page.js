@@ -1,9 +1,10 @@
 import React from 'react'
-
+import SideBar from '@/components/Sidebar';
+import { awardsData } from '@/data/awardsData';
 const AwardsPage = () => {
   return (
     <div>
-        <div className="text-2xl font-bold bg-sky-800 text-white p-4 text-center">Our Awards Area</div>
+        <SideBar title="Awards" componentData={awardsData} />
     </div>
   )
 }
