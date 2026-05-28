@@ -9,7 +9,7 @@ const AboutUs = () => {
     return (
         <div className="grid grid-cols-12 gap-4 p-5">
             <aside className="col-span-3 bg-sky-900 p-5">
-                <h1 className="text-2xl font-bold text-center text-white">About Us</h1>
+                <h1 className="text-2xl font-bold text-center text-white bg-slate-800">About Us</h1>
 
                 {AboutUsData.map((data, index) => (
                     <div key={index} className="p-2" >
@@ -21,9 +21,8 @@ const AboutUs = () => {
                 ))}
             </aside>
 
-            <main className="col-span-9 bg-gray-200 p-5 rounded">
+            <main className="col-span-9 bg-gray-500 p-5 rounded">
                 <h1 className="text-2xl font-bold mb-4">{aboutTitle}</h1>
-
                 <p className="text-gray-700">{AboutUsData.find(data => data.title === aboutTitle)?.description || "Please select a topic from the left to see the information."}</p>
             </main>
 

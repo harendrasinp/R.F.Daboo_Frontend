@@ -13,7 +13,7 @@ const Home = () => {
           <HeroSlider />
         </main>
       </section>
-      <div className="w-full px-5 py-10 bg-blue-950">
+      <div className="w-full px-5 py-10 bg-sky-800">
         <h2 className="text-2xl font-bold text-white mb-4 text-center">Principal's Of The Schools</h2>
         <div className="grid grid-cols-6 md:grid-cols-3 gap-6">
           {principalData.map((data,index) => (
