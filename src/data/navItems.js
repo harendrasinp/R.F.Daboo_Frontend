@@ -8,5 +8,4 @@
     { name: "Academics", path: "/academics" },
     { name: "Events", path: "/events" },
     { name: "Gallery", path: "/gallery" },
-    // { name: "Login", path: "/login" },
   ];
