@@ -2,6 +2,7 @@ import React from 'react'
 import CentralSidebar from '../components/CentralSidebar';
 import HeroSlider from '../utils/heroImageSlider';
 import {principalData} from '../data/PrincipalData';
+
 const Home = () => {
   return (
     <div>

@@ -3,7 +3,7 @@ import Link from "next/link"
 import Image from "next/image"
 const Header = ({ openModal }) => {
   return (
-    <div className="relative w-full bg-white">
+    <div className="relative w-full bg-white mb-2">
       <div className="flex items-end space-x-4 px-4 py-2">
         <Image
           src="/logos/Rf-daboo.png"
