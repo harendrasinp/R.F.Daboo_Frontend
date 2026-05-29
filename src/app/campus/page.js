@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image';
+import { Square } from "lucide-react"
 import { FacilitiesList } from "../../data/Campus";
 const Campus = () => {
     return (
@@ -14,12 +15,17 @@ const Campus = () => {
                 </div>
             </div>
             <div>
-                <h1 className="text-center text-2xl font-bold text-white mb-4 bg-sky-800">Facilities</h1>
+                <h1 className="text-center text-2xl font-bold text-white mb-4 bg-sky-800">School's Facilities</h1>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 p-5">
-                    {FacilitiesList.map((data,index)=>(
-                        <div key={index} className="bg-white rounded-lg shadow-md shadow-sky-800 p-4 flex flex-col items-center">
-                            <h3 className="text-lg font-semibold">{data.name}</h3>
-                            <p className="text-gray-600">{data.description}</p>
+                    {FacilitiesList.map((data, index) => (
+                        <div key={index}>
+                            <div className="flex gap-2 mb-1">
+                                <Square className="w-3 h-3 shrink-0 text-amber-300 bg-amber-300 " />
+                                <div>
+                                    <h2 className="text-lg font-semibold text-sky-800">{data.name}</h2>
+                                    <p className="text-sky-700">{data.description}</p>
+                                </div>
+                            </div>
                         </div>
                     ))}
                 </div>
