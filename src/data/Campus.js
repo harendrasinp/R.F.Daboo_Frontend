@@ -30,3 +30,33 @@ export const FacilitiesList = [
         // image: "/facilities/smart-classrooms.jpg"
     }
 ];
+
+export const CampusImage = [
+
+    {
+        name: "Computer Lab",
+        image: "/campus/CompLab.jpg",
+        alt: "Campus Image"
+    },
+    {
+        name: "Chemistry Lab",
+        image: "/campus/ChemLab.jpg",
+        alt: "Campus Image"
+    },
+    {
+        name: "Physics Lab",
+        image: "/campus/PhyLab.jpg",
+        alt: "Campus Image"
+    },
+    {
+        name: "Biology Lab",
+        image: "/campus/BioLab.jpg",
+        alt: "Campus Image"
+    },
+    {
+        name: "Play Ground",
+        image: "/campus/Ground.jpg",
+        alt: "Campus Image"
+    }
+
+]

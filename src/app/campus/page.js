@@ -2,6 +2,7 @@ import React from 'react'
 import Image from 'next/image';
 import { Square } from "lucide-react"
 import { FacilitiesList } from "../../data/Campus";
+import{CampusImage} from "../../data/Campus";
 const Campus = () => {
     return (
         <div>
@@ -26,6 +27,17 @@ const Campus = () => {
                                     <p className="text-sky-700">{data.description}</p>
                                 </div>
                             </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+            <div>
+                <h1 className="text-center text-2xl font-bold text-white mb-4 bg-sky-800">Campus Images</h1>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-5">
+                    {CampusImage.map((data, index) => (
+                        <div key={index}  className=" relative w-full">
+                            <Image src={data.image} alt={data.alt} width={300} height={500} className="w-full h-64 object-cover"/>
+                            <h1 className=" absolute bottom-0 left-0 right-0 bg-black/30 backdrop-blur-2xl text-white text-lg font-semibold text-center p-2">{data.name}</h1>
                         </div>
                     ))}
                 </div>
