@@ -3,7 +3,7 @@ import React from 'react'
 import { useState } from 'react';
 import { ArrowBigRight } from "lucide-react";
 
-const SideBar = ({ componentData, title }) => {
+const SideBar_DeatilBar = ({ componentData, title }) => {
     const [aboutTitle, setAboutTitle] = useState(componentData[0].title);
     return (
         <div className="grid grid-cols-12 gap-4 p-5">
@@ -29,4 +29,4 @@ const SideBar = ({ componentData, title }) => {
     )
 }
 
-export default SideBar
+export default SideBar_DeatilBar

@@ -3,7 +3,7 @@
     { name: "About Us", path: "/aboutUs" },
     { name: "Awards", path: "/awards" },
     { name: "Campus", path: "/campus" },
-    { name: "Student Life", path: "/student-life" },
+    { name: "Student Life", path: "/studentLife" },
     { name: "Contact Us", path: "/contact" },
     { name: "Academics", path: "/academics" },
     { name: "Events", path: "/events" },

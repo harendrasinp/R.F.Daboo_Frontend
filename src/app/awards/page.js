@@ -1,5 +1,5 @@
 import React from 'react'
-import SideBar from '@/components/Sidebar';
+import SideBar from '@/components/Sidebar_DetailBar';
 import { awardsData } from '@/data/awardsData';
 const AwardsPage = () => {
   return (

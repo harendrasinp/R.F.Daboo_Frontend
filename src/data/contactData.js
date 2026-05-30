@@ -5,7 +5,7 @@ export const contactData = [
     },
     {
         title: "Office Phone :",
-        data: "+91 1234567890"
+        data: "+91-123-456-7890"
     },
     {
         title: "Email :",
