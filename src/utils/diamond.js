@@ -5,7 +5,7 @@ const DiamondImage = ({ image }) => {
       <img
         src={image}
         alt=""
-        className="w-full h-full object-cover scale-150"
+        className="w-full h-full object-contain scale-150"
       />
     </div>
   );

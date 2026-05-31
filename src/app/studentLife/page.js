@@ -1,20 +1,19 @@
 import React from 'react'
 import DiamondImage from '../../utils/diamond';
+import Image from 'next/image';
+import { studenstLifeheroPhotos } from '@/data/studenstLife';
 const StudentsLife = () => {
     return (
         <div className="flex flex-col items-center mb-3">
-            <div className="relative bg-linear-to-bl from-pink-700 to-sky-300 w-200 p-2 h-125 ">
-            
-                    <div className="absolute top-10 left-10">
-                        <DiamondImage image="/hero/img1.jpeg" />
-                    </div>
-
-                    <div className="absolute top-39 left-39">
-                        <DiamondImage image="/hero/img2.jpeg" />
-                    </div>
-                    <div className="absolute top-68 left-10">
-                        <DiamondImage image="/hero/img1.jpeg" />
-                    </div>
+            <div className="relative w-200 p-2 h-125 shadow-2xl shadow-indigo-800">
+                    <Image src="/studentsLife/herro_bg2.jpg" width={800} height={500} alt="Image 1" 
+                    className="w-full h-full object-cover  inset-0" />
+                    {/* ---------------------first row------------------ */}
+                    {studenstLifeheroPhotos.map((photo, index) => (
+                        <div key={index} className={`absolute ${photo.top} ${photo.left}`}>
+                            <DiamondImage image={photo.image} />
+                        </div>
+                    ))}
             </div>
         </div>
     )

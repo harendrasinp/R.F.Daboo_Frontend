@@ -7,8 +7,8 @@ import { FaXTwitter } from "react-icons/fa6";
 const Footer = () => {
   return (
     <div className="bg-sky-950 text-white p-4 text-center flex items-center justify-center">
-      <div className="w-1/2 grid grid-cols-1 md:grid-cols-3">
-        <div className="flex flex-col items-start justify-start">
+      <div className="w-1/2 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="flex flex-col items-start justify-start border-r border-gray-600 pr-1">
           <h1 className="text-lg font-bold mb-2">Quick Links</h1>
           {navItems.map((item, index) => (
             <div key={index} className="flex items-center gap-1">
@@ -19,7 +19,7 @@ const Footer = () => {
             </div>
           ))}
         </div>
-        <div>
+        <div className="flex flex-col items-start justify-start border-r border-gray-600 pr-1">
           <h1 className="text-lg font-bold mb-2 text-left">Contact Us</h1>
           {contactData.map((item, index) => (
             <div key={index} className="flex flex-col items-start justify-start text-sm p-1">
@@ -31,7 +31,7 @@ const Footer = () => {
             </div>
           ))}
         </div>
-        <div className="flex flex-col items-center"> 
+        <div className="flex flex-col items-center "> 
           <h1 className="text-lg font-bold mb-2 flex text-left">Follow Us</h1>
           <div className="flex flex-col items-start justify-center gap-4">
             <a href="https://www.facebook.com/yourpage" target="_blank" rel="noopener noreferrer" className="text-white hover:text-blue-500 flex gap-2">
