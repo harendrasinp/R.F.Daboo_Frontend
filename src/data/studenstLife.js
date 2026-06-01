@@ -20,7 +20,7 @@ export const studenstLifeheroPhotos= [
         left: "left-12"
     },
     {
-        image: "/studentsLife/img4.jpg",
+        image: "/studentsLife/img5.jpg",
         top: "top-40",  
         left: "left-58"
     },

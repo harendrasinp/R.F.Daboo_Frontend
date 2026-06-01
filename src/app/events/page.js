@@ -1,8 +1,11 @@
 import React from 'react'
-
+import SideBar_DeatilBar from '@/components/Sidebar_DetailBar'
+import { EventsData } from '@/data/EventData'
 const Events = () => {
   return (
-    <div>Events</div>
+    <div>
+        <SideBar_DeatilBar componentData={EventsData} title={"Events"}/>
+    </div>
   )
 }
 

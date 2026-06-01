@@ -1,8 +1,11 @@
 import React from 'react'
-
+import SideBar_DeatilBar from '@/components/Sidebar_DetailBar'
+import { AcademicsData } from '@/data/AcademicsData'
 const Acadamics = () => {
   return (
-    <div>Acadamics</div>
+    <div>
+        <SideBar_DeatilBar componentData={AcademicsData} title="ACADEMICS" />
+    </div>
   )
 }
 

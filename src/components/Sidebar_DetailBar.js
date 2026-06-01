@@ -22,7 +22,22 @@ const SideBar_DeatilBar = ({ componentData, title }) => {
 
             <main className="col-span-9 bg-gray-500 p-5 rounded">
                 <h1 className="text-2xl font-bold mb-4 text-sky-800 bg-orange-200 w-fit px-3 rounded-[0.2rem]">{aboutTitle}</h1>
-                <p className="text-amber-200">{componentData.find(data => data.title === aboutTitle)?.description || "Please select a topic from the left to see the information."}</p>
+                <p className="text-amber-200">{componentData.find(data => data.title === aboutTitle)?.description ||null}</p>
+                <div>
+                 {componentData.find(data => data.title === aboutTitle)?.sections?.map((section, index) => (
+                    <div key={index} className="mt-4">
+                        <h2 className="text-xl font-semibold text-gray-900">{section.Section}</h2>
+                        <ul className="list-disc list-inside text-amber-200">
+                            {section.Education.map((item, idx) => (
+                                <li key={idx}>{item}</li>
+                            ))}
+                        </ul>
+                    </div>
+                ))}
+                </div>
+                <div>
+                <p className="text-amber-200">{componentData.find(data => data.title === aboutTitle)?.Extra_details || null}</p>
+                </div>
             </main>
 
         </div>
