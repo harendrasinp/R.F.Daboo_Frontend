@@ -2,6 +2,7 @@ import { navItems } from "../data/navItems"
 import Link from "next/link"
 import Image from "next/image"
 import HamburgerIcon from "./HamburgerIcon"
+import Marque from "./Marque"
 const Header = ({ openModal }) => {
   return (
     <div className="relative bg-orange-300 w-full md:bg-white">
@@ -13,8 +14,9 @@ const Header = ({ openModal }) => {
           height={100}
           className="object-cover"
         />
-        <h1 className="font-bold text-gray-800 md:text-2xl">SHREE R. F. Daboo Education Society</h1>
+        <h1 className="font-bold text-gray-800 md:text-2xl">Shree R. F. Daboo Education Society</h1>
       </div>
+      <Marque />
       <HamburgerIcon />
       <div className="hidden w-full bg-gray-800 md:flex justify-center items-center space-x-6 py-1">
         {navItems.map((item, index) => (
