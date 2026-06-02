@@ -38,7 +38,7 @@ const Footer = () => {
             <h1 className="text-lg font-bold">Follow Us</h1>
           </div>
           <div className="flex md:flex-col items-start justify-center gap-4">
-            <a href="https://www.facebook.com/yourpage" target="_blank" rel="noopener noreferrer" className="text-white hover:text-blue-500 flex gap-2">
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-blue-500 flex gap-2">
               <FaFacebook size={24} />
               Facebook
             </a>
