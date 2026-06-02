@@ -3,7 +3,7 @@ import Link from "next/link"
 import Image from "next/image"
 const Header = ({ openModal }) => {
   return (
-    <div className="relative w-full bg-white mb-2">
+    <div className="relative bg-orange-300 w-full mb-2 md:bg-white">
       <div className="flex items-end space-x-4 px-4 py-2">
         <Image
           src="/logos/Rf-daboo.png"
@@ -14,7 +14,7 @@ const Header = ({ openModal }) => {
         />
         <h1 className="text-2xl font-bold text-gray-800">Shree R. F. Daboo Education Society</h1>
       </div>
-      <div className="w-full bg-gray-800 flex justify-center items-center space-x-6 py-1">
+      <div className="hidden w-full bg-gray-800 md:flex justify-center items-center space-x-6 py-1">
         {navItems.map((item, index) => (
           <Link key={index} href={item.path} className="text-white hover:text-orange-300">
             {item.name}

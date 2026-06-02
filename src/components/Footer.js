@@ -6,9 +6,9 @@ import { FaFacebook, FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 const Footer = () => {
   return (
-    <div className="bg-sky-950 text-white p-4 md:flex items-center justify-between md:justify-center">
-      <div className="hidden w-1/2 md:grid grid-cols-2 md:grid-cols-3 gap-8">
-        <div className="flex flex-col items-start justify-start border-r border-gray-600 pr-1">
+    <div className="flex justify-center bg-sky-950 text-white p-2 text-sm">
+      <div className="flex justify-center gap-1 md:gap-15">
+        <div className="flex flex-col items-start justify-start border-r border-gray-600 pr-1 md:pr-5">
           <h1 className="text-lg font-bold mb-2">Quick Links</h1>
           {navItems.map((item, index) => (
             <div key={index} className="flex items-center gap-1">
@@ -19,7 +19,7 @@ const Footer = () => {
             </div>
           ))}
         </div>
-        <div className="flex flex-col items-start justify-start border-r border-gray-600 pr-1">
+        <div className="w-45  border-r border-gray-600 md:pr-5">
           <h1 className="text-lg font-bold mb-2 text-left">Contact Us</h1>
           {contactData.map((item, index) => (
             <div key={index} className="flex flex-col items-start justify-start text-sm p-1">
@@ -48,34 +48,6 @@ const Footer = () => {
             </a>
             {/* Add more social media icons and links as needed */}
           </div>
-        </div>
-      </div>
-      {/* ------------------------Mobile view------------ */}
-      <div className="md:hidden grid grid-cols-12 gap-2">
-        <div className="grid col-span-6">
-          <div className="flex flex-col items-start justify-start border-r border-gray-600 pr-1">
-            <h1 className="text-lg font-bold mb-2">Quick Links</h1>
-            {navItems.map((item, index) => (
-              <div key={index} className="flex items-center gap-1">
-                <Square className="w-2 h-2 shrink-0 text-amber-300 bg-amber-300 " />
-                <a href={item.path} className="hover:underline cursor-pointer flex flex-col items-start justify-start text-sm p-1">
-                  {item.name}
-                </a>
-              </div>
-            ))}
-          </div>
-        </div>
-        <div className="grid col-span-6 border-gray-600 pr-1">
-          <h1 className="text-lg font-bold mb-2 text-left">Contact Us</h1>
-          {contactData.map((item, index) => (
-            <div key={index} className="flex flex-col items-start justify-start text-sm p-1">
-              <div className="flex items-center gap-1">
-                <Square className="w-2 h-2 shrink-0 text-amber-300 bg-amber-300 " />
-                <p className="font-semibold">{item.title}</p>
-              </div>
-              <p className="text-left">{item.data}</p>
-            </div>
-          ))}
         </div>
       </div>
     </div>
