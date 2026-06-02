@@ -26,7 +26,7 @@ const Footer = () => {
               <div key={index} className="flex flex-col items-start justify-start text-sm p-1">
                 <div className="flex items-center gap-1">
                   <Square className="w-2 h-2 shrink-0 text-amber-300 bg-amber-300 " />
-                  <p className="font-semibold">{item.title}</p>
+                  <p className="font-bold">{item.title}</p>
                 </div>
                 <p className="text-left">{item.data}</p>
               </div>
