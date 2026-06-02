@@ -1,37 +1,37 @@
 export const principalData = [
     {
         id: 1,
-        name: "Principal Name 1",
+        name: "Harendrasinh Parmar",
         school: "School Name 1",
-        // image: "/images/principal1.jpg"
+        image: "/Principls/p1.jpg"
     },
     {     id: 2,
-        name: "Principal Name 2",
+        name: "Kuldeepsinh Parmar",
         school: "School Name 2",
-        // image: "/images/principal2.jpg" 
+        image: "/Principls/p2.jpg" 
     },
     {
         id: 3,  
-        name: "Principal Name 3",
+        name: "Kalpesh Rajput",
         school: "School Name 3",
-        // image: "/images/principal3.jpg"
+        image: "/Principls/p3.jpg"
     },
     {
         id: 4,  
-        name: "Principal Name 4",
+        name: "Baldevsinh Rajput",
         school: "School Name 4",
-        // image: "/images/principal4.jpg"
+        image: "/Principls/p4.jpg"
     },
     {
         id: 5,  
-        name: "Principal Name 5",
+        name: "Dharmendrasinh Parmar",
         school: "School Name 5",
-        // image: "/images/principal5.jpg"
+        image: "/Principls/p5.jpg"
     },
     {
         id: 6,
-        name: "Principal Name 6",
+        name: "Rajendrasinh Parmar",
         school: "School Name 6",
-        // image: "/images/principal6.jpg"
+        image: "/Principls/p6.jpg"
     }
 ]

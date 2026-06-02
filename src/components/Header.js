@@ -5,7 +5,7 @@ import HamburgerIcon from "./HamburgerIcon"
 const Header = ({ openModal }) => {
   return (
     <div className="relative bg-orange-300 w-full md:bg-white">
-      <div className="flex items-end space-x-4 px-4 py-2">
+      <div className="flex items-end space-x-4 px-4 py-5 md:py-2">
         <Image
           src="/logos/Rf-daboo.png"
           alt="school logo"
@@ -13,7 +13,7 @@ const Header = ({ openModal }) => {
           height={100}
           className="object-cover"
         />
-        <h1 className="text-2xl font-bold text-gray-800">Shree R. F. Daboo Education Society</h1>
+        <h1 className="font-bold text-gray-800 md:text-2xl">SHREE R. F. Daboo Education Society</h1>
       </div>
       <HamburgerIcon />
       <div className="hidden w-full bg-gray-800 md:flex justify-center items-center space-x-6 py-1">
