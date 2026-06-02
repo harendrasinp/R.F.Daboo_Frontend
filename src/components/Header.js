@@ -1,6 +1,7 @@
 import { navItems } from "../data/navItems"
 import Link from "next/link"
 import Image from "next/image"
+import HamburgerIcon from "./HamburgerIcon"
 const Header = ({ openModal }) => {
   return (
     <div className="relative bg-orange-300 w-full md:bg-white">
@@ -14,6 +15,7 @@ const Header = ({ openModal }) => {
         />
         <h1 className="text-2xl font-bold text-gray-800">Shree R. F. Daboo Education Society</h1>
       </div>
+      <HamburgerIcon />
       <div className="hidden w-full bg-gray-800 md:flex justify-center items-center space-x-6 py-1">
         {navItems.map((item, index) => (
           <Link key={index} href={item.path} className="text-white hover:text-orange-300">
