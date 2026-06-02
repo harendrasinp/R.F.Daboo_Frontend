@@ -6,7 +6,7 @@ import { FaFacebook, FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 const Footer = () => {
   return (
-    <div className="flex justify-center bg-sky-950 text-white p-2 text-sm">
+    <div className="flex justify-center bg-slate-800 text-white p-2 text-sm">
       <div className="flex justify-center gap-1 md:gap-15">
         <div className="flex flex-col items-start justify-start border-r border-gray-600 pr-1 md:pr-5">
           <h1 className="text-lg font-bold mb-2">Quick Links</h1>
