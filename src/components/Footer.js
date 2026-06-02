@@ -6,9 +6,9 @@ import { FaFacebook, FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 const Footer = () => {
   return (
-    <div className="flex justify-center bg-slate-800 text-white p-2 text-sm">
-      <div className="flex justify-center gap-1 md:gap-15">
-        <div className="flex flex-col items-start justify-start border-r border-gray-600 pr-1 md:pr-5">
+    <div className="flex justify-center bg-slate-800 text-white text-sm p-5">
+      <div className="flex justify-center gap-1 md:w-1/2 md:justify-evenly">
+        <div className="flex flex-col items-start justify-start border-r-2 border-gray-600 md:pr-8">
           <h1 className="text-lg font-bold mb-2">Quick Links</h1>
           {navItems.map((item, index) => (
             <div key={index} className="flex items-center gap-1">
@@ -19,7 +19,7 @@ const Footer = () => {
             </div>
           ))}
         </div>
-        <div className="w-45  border-r border-gray-600 md:pr-5">
+        <div className="w-45 border-r-2 border-gray-600">
           <h1 className="text-lg font-bold mb-2 text-left">Contact Us</h1>
           {contactData.map((item, index) => (
             <div key={index} className="flex flex-col items-start justify-start text-sm p-1">
