@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Phone,Mail } from "lucide-react";
 const Marque = () => {
     return (
-        <div className="w-full py-1 flex items-center justify-center  overflow-hidden">
+        <div className="w-full flex items-center justify-center  overflow-hidden">
             <motion.h1
                 initial={{ x: "100vw" }}
                 animate={{ x: "-100vw" }}
