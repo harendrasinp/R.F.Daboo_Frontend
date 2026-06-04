@@ -3,7 +3,7 @@ import Link from "next/link"
 import Image from "next/image"
 import HamburgerIcon from "./HamburgerIcon"
 import Marque from "./Marque"
-const Header = ({ openModal }) => {
+const Header = ({ openModal,openMobileMenu}) => {
   return (
     <div className="relative bg-orange-300 w-full md:bg-white">
       <div className="flex items-end px-2 py-1">
@@ -19,7 +19,7 @@ const Header = ({ openModal }) => {
         <div className="md:flex flex-col items-center justify-center">
           <h1 className="font-bold text-gray-800 md:text-2xl text-sm">Shree R. F. Daboo Education Society </h1>
         </div>
-        <HamburgerIcon />
+        <HamburgerIcon openMobileMenu={openMobileMenu} />
       </div>
       <Marque />
       <div className="hidden w-full bg-gray-800 md:flex justify-center items-center space-x-6 py-1">
