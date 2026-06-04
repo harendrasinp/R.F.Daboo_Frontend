@@ -2,13 +2,18 @@ import React from 'react'
 import Link from 'next/link';
 import { navItems } from './../data/navItems';
 const MobileSlideMenu = ({ isMenuOpen, setOpenMenu }) => {
-    ;
-    if (!isMenuOpen) return null;
+  
     return (
         <>
-            <div className="absolute top-0 right-0 h-screen z-12 w-1/2 bg-gray-800/80 flex flex-col justify-center items-start md:hidden">
+            <div className={`
+                fixed top-0 right-0 h-screen w-1/2
+                bg-gray-800 z-50
+                flex flex-col justify-center items-start
+                transition-transform duration-300 ease-in-out
+                ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}
+            `}>
                 <div onClick={setOpenMenu} className='text-red-700 ml-4 cursor-pointer'>
-                    <h1>X</h1>
+                    <h1>X close</h1>
                 </div >
                 {navItems.map((item, index) => (
                     <Link key={index} href={item.path} className="text-white hover:text-orange-300 p-4">
