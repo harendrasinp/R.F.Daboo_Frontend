@@ -24,7 +24,7 @@ export const AboutUsData = [
         description: "Our team of highly qualified and experienced teachers is committed to guiding students with care, dedication, and professionalism. Teachers regularly participate in training programs and workshops to stay updated with modern teaching methodologies"
     },
     {
-        title:"Why Choose Bright Future Public School?",
+        title:"Why Choose Us?",
         description:"Experienced and qualified teachers Smart classrooms and modern infrastructureFocus on academics and personality developmentSafe and disciplined campusStrong extracurricular and sports programsIndividual attention to every studentParent-teacher communication and support"
     }
 
