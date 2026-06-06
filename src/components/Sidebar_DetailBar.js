@@ -21,7 +21,7 @@ const SideBar_DeatilBar = ({ componentData, title }) => {
             </aside>
 
             <main className="col-span-8 bg-blue-100 p-1 rounded">
-                <h1 className="text-2xl font-bold mb-4 text-blue-50 bg-gray-900 w-fit px-3 rounded-[0.2rem]">{aboutTitle}</h1>
+                <h1 className="text-sm md:text-2xl font-bold mb-4 text-blue-50 bg-gray-900 w-fit px-3 rounded-[0.2rem]">{aboutTitle}</h1>
                 <p className="text-gray-900">{componentData.find(data => data.title === aboutTitle)?.description ||null}</p>
                 <div>
                  {componentData.find(data => data.title === aboutTitle)?.sections?.map((section, index) => (
