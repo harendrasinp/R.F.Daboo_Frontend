@@ -12,7 +12,7 @@ const Home = () => {
         </div>
         <SchoolsListComponent />
       </section>
-      <div className="w-full px-5 py-10 bg-sky-800 ">
+      <div className="w-full px-2 py-10 bg-sky-800 ">
         <h2 className="text-2xl font-bold text-white mb-4 text-center">Principal's Of The Schools</h2>
         <div className="grid grid-cols-3 md:grid-cols-6 gap-2">
           {principalData.map((data,index) => (
