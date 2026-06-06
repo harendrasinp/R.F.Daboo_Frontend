@@ -6,13 +6,13 @@ import { ArrowBigRight } from "lucide-react";
 const SideBar_DeatilBar = ({ componentData, title }) => {
     const [aboutTitle, setAboutTitle] = useState(componentData[0].title);
     return (
-        <div className="grid grid-cols-12 gap-4 p-5">
-            <aside className="col-span-3 bg-orange-400 p-5">
-                <h1 className="text-2xl font-bold text-center text-white bg-slate-800">{title}</h1>
+        <div className="grid grid-cols-12 gap-1 p-1 md:gap-4 md:p-5">
+            <aside className="col-span-4 bg-orange-300 p-1">
+                <h1 className="text-sm font-bold text-center text-white bg-slate-800 md:text-2xl">{title}</h1>
 
                 {componentData.map((data, index) => (
-                    <div key={index} className="p-2" >
-                        <div onClick={() => setAboutTitle(data.title)} className="w-full text-left  text-white hover:underline cursor-pointer flex gap-2 text-sm">
+                    <div key={index} className="p-1" >
+                        <div onClick={() => setAboutTitle(data.title)} className="w-full text-left  text-white hover:underline cursor-pointer flex gap-1 text-sm">
                             <ArrowBigRight className="w-5 h-5 shrink-0"/>
                             <span>{data.title}</span>
                         </div>
@@ -20,7 +20,7 @@ const SideBar_DeatilBar = ({ componentData, title }) => {
                 ))}
             </aside>
 
-            <main className="col-span-9 bg-blue-100 p-5 rounded">
+            <main className="col-span-8 bg-blue-100 p-1 rounded">
                 <h1 className="text-2xl font-bold mb-4 text-blue-50 bg-gray-900 w-fit px-3 rounded-[0.2rem]">{aboutTitle}</h1>
                 <p className="text-gray-900">{componentData.find(data => data.title === aboutTitle)?.description ||null}</p>
                 <div>

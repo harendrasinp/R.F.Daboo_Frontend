@@ -1,11 +1,11 @@
 "use client";
 import React from 'react'
 import { AboutUsData } from '@/data/AboutUs';
-import SideBar from '@/components/Sidebar_DetailBar';
+import SideBar_DeatilBar from '@/components/Sidebar_DetailBar';
 const AboutUs = () => {
     return (
         <div>
-            <SideBar title="About Us" componentData={AboutUsData}/>
+            <SideBar_DeatilBar title="About Us" componentData={AboutUsData}/>
         </div>
     )
 }
