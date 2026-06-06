@@ -7,7 +7,7 @@ const MobileSlideMenu = ({ isMenuOpen, setOpenMenu }) => {
         <>
             <div className={`
                 fixed top-0 right-0 h-screen w-1/2
-                bg-gray-800 z-50
+                bg-gray-800/80 z-50
                 flex flex-col justify-center items-start
                 transition-transform duration-300 ease-in-out
                 ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}
