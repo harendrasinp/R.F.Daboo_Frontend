@@ -25,7 +25,7 @@ const MobileSlideMenu = () => {
                     </Link>
                 ))}
                 <div className="ml-4">
-                    <button className="text-sky-950 bg-orang-300 p-2 rounded hover:bg-orange-300 cursor-pointer" onClick={openLoginModalFunction}>
+                    <button className="text-sky-950 bg-orang-300 p-2 rounded bg-amber-300 hover:bg-orange-300 cursor-pointer" onClick={openLoginModalFunction}>
                         Login
                     </button>
                 </div>
