@@ -20,9 +20,9 @@ const Header = () => {
             className="object-cover md:w-full md:h-full"
           />
         </div>
-          <div className="absolute top-11 -right-3 md:block w-22 h-22 md:w-45 md:h-45 md:top-[1px] md:-right-9">
+          {/* <div className="absolute top-11 -right-3 md:block w-22 h-22 md:w-45 md:h-45 md:top-[1px] md:-right-9">
              <Image src="/header/rfimage1.png" alt="header image" width={100} height={100} className="w-full h-auto object-cover" />
-          </div>
+          </div> */}
         <div className="md:flex flex-col items-center justify-center">
           <h1 className="font-bold text-gray-800 md:text-2xl text-sm">Shree R. F. Daboo Education Society </h1>
         </div>
