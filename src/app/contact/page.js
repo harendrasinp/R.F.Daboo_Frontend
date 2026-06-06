@@ -3,7 +3,7 @@ import { phoneNumbers,contactData } from '@/data/contactData';
 const Contact = () => {
   return (
     <div>
-      <div className="bg-sky-800 text-center py-2 text-white">
+      <div className="bg-orange-300 text-center py-2 text-gray-800">
         <h1 className="text-2xl font-bold text-center">Contact Us</h1>
         <p className="text-center mt-1">Feel free to reach out to us for any inquiries or information.</p>
       </div>
