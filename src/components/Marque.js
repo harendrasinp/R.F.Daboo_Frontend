@@ -15,9 +15,9 @@ const Marque = () => {
                 }}
                 className="whitespace-nowrap text-[0.8rem] text-gray-800 flex items-center justify-center gap-2"
             >
-                <Phone className="w-5 h-5 text-orange-500" />
+                <Phone className="w-5 h-5 text-BlueNavyColor" />
                 <span>+91 12345 67890, +91 12345 67890</span>
-                <Mail className="w-5 h-5 text-orange-500" />
+                <Mail className="w-5 h-5 text-BlueNavyColor" />
                 <span>info@RfDaboo.com</span>
             </motion.h1>
         </div>

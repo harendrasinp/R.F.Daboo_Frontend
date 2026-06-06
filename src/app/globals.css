@@ -10,6 +10,8 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  /* ----------my custom colors ---------- */
+  --color-BlueNavyColor: #384C8A;
 }
 
 @media (prefers-color-scheme: dark) {
