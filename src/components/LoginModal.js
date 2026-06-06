@@ -1,21 +1,20 @@
-
+"use client"
 import React from 'react'
+import {useContext} from "react"
+import { ContextAPI } from '../contextAPI/Context';
 
-const LoginModal = ({ isOpen, onClose }) => {
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-    }
-    if (!isOpen) return null;
+const LoginModal = () => {
+    const { isOpenLogin,openLoginModalFunction} = useContext(ContextAPI);
+    if (!isOpenLogin) return null;
     return (
         <div className="fixed inset-0 bg-black/60 flex justify-center items-center z-50">
             <div className="absolute top-52 left-1/2 transform -translate-x-1/2 bg-gray-300 p-6 rounded shadow-lg z-100 flex flex-col gap-4 w-80">
-                <button onClick={onClose} className="absolute right-3 top-3 cursor-pointer">✕</button>
+                <button onClick={openLoginModalFunction} className="absolute right-3 top-3 cursor-pointer">✕</button>
                 <div>
                     <h1 className="text-center text-lg font-bold ">Login</h1>
                 </div>
                 <div>
-                    <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+                    <form className="flex flex-col gap-4">
                         <input
                             type="text"
                             id="username"
