@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link';
 import { navItems } from './../data/navItems';
-const MobileSlideMenu = ({ isMenuOpen, setOpenMenu }) => {
+const MobileSlideMenu = ({ isMenuOpen, setOpenMenu, openLoginModal }) => {
   
     return (
         <>
@@ -21,7 +21,7 @@ const MobileSlideMenu = ({ isMenuOpen, setOpenMenu }) => {
                     </Link>
                 ))}
                 <div className="ml-4">
-                    <button className="text-sky-950 bg-amber-300 p-2 rounded hover:bg-orange-300 cursor-pointer">
+                    <button className="text-sky-950 bg-amber-300 p-2 rounded hover:bg-orange-300 cursor-pointer" onClick={openLoginModal}>
                         Login
                     </button>
                 </div>
