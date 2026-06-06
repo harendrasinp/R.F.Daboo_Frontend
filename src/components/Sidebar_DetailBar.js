@@ -6,7 +6,7 @@ import { ArrowBigRight } from "lucide-react";
 const SideBar_DeatilBar = ({ componentData, title }) => {
     const [aboutTitle, setAboutTitle] = useState(componentData[0].title);
     return (
-        <div className="grid grid-cols-12 gap-1 p-1 md:gap-4 md:p-5">
+        <div className="grid grid-cols-12 gap-1 p-1 h-screen md:gap-4 md:p-5">
             <aside className="col-span-4 bg-gray-800 p-1">
                 <h1 className="text-sm font-bold text-center text-white bg-slate-800 md:text-2xl">{title}</h1>
 
