@@ -23,8 +23,13 @@ const Header = () => {
           <div className="absolute top-15 right-1 md:block w-8 h-8 md:w-18 md:h-18 md:top-4 md:right-0">
              <Image src="/header/rfimage2.png" alt="header image" width={100} height={100} className="w-full h-auto object-cover" />
           </div>
-        <div className="md:flex flex-col items-center justify-center">
-          <h1 className="font-bold text-gray-800 md:text-2xl text-sm">Shree R. F. Daboo Education Society </h1>
+        <div className="flex-col items-center">
+          <h1 className="font-bold text-gray-800 md:text-2xl text-sm">
+            Shree R. F. Daboo 
+          </h1>
+          <h1 className="font-bold text-gray-800 md:text-2xl text-sm">
+            Education Society(VYARA)
+          </h1>
         </div>
         <HamburgerIcon />
       </div> 
