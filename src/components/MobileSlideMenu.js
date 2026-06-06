@@ -20,7 +20,7 @@ const MobileSlideMenu = () => {
                     <CircleX className="text-orange-300 w-10 h-10" />
                 </div >
                 {navItems.map((item, index) => (
-                    <Link key={index} href={item.path} className="text-white hover:text-orange-300 p-4">
+                    <Link key={index} href={item.path} className="text-orange-300 hover:text-purple-300 p-4">
                         {item.name}
                     </Link>
                 ))}
