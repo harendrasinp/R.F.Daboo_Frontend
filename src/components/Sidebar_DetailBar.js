@@ -7,12 +7,12 @@ const SideBar_DeatilBar = ({ componentData, title }) => {
     const [aboutTitle, setAboutTitle] = useState(componentData[0].title);
     return (
         <div className="grid grid-cols-12 gap-1 p-1 md:gap-4 md:p-5">
-            <aside className="col-span-4 bg-orange-300 p-1">
+            <aside className="col-span-4 bg-gray-800 p-1">
                 <h1 className="text-sm font-bold text-center text-white bg-slate-800 md:text-2xl">{title}</h1>
 
                 {componentData.map((data, index) => (
                     <div key={index} className="p-1" >
-                        <div onClick={() => setAboutTitle(data.title)} className="w-full text-left  text-white hover:underline cursor-pointer flex gap-1 text-sm">
+                        <div onClick={() => setAboutTitle(data.title)} className="w-full text-left text-orange-300 hover:underline hover:text-purple-300 cursor-pointer flex gap-1 text-sm">
                             <ArrowBigRight className="w-5 h-5 shrink-0"/>
                             <span>{data.title}</span>
                         </div>
