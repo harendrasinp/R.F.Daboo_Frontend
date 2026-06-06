@@ -10,10 +10,10 @@ const Footer = () => {
       <div className="flex flex-col md:flex-row justify-center md:w-1/2 md:justify-evenly">
         <div className="w-88 flex items-start justify-between md:w-90">
           <div className="w-35 flex flex-col items-start justify-start border-r-2 border-gray-600">
-            <h1 className="text-lg font-bold mb-2">Quick Links</h1>
+            <h1 className="text-lg font-bold mb-2 text-orange-300">Quick Links</h1>
             {navItems.map((item, index) => (
               <div key={index} className="flex items-center gap-1">
-                <Square className="w-2 h-2 shrink-0 text-amber-300 bg-amber-300 " />
+                <Square className="w-2 h-2 shrink-0 text-orange-300 bg-orange-300 " />
                 <a href={item.path} className="hover:underline cursor-pointer flex flex-col items-start justify-start text-sm p-1">
                   {item.name}
                 </a>
@@ -21,11 +21,11 @@ const Footer = () => {
             ))}
           </div>
           <div className="w-45 md:border-r-2 border-gray-600 ">
-            <h1 className="text-lg font-bold mb-2 text-left">Contact Us</h1>
+            <h1 className="text-lg font-bold mb-2 text-left text-orange-300">Contact Us</h1>
             {contactData.map((item, index) => (
               <div key={index} className="flex flex-col items-start justify-start text-sm p-1">
                 <div className="flex items-center gap-1">
-                  <Square className="w-2 h-2 shrink-0 text-amber-300 bg-amber-300 " />
+                  <Square className="w-2 h-2 shrink-0 text-orange-300 bg-orange-300 " />
                   <p className="font-bold">{item.title}</p>
                 </div>
                 <p className="text-left">{item.data}</p>
