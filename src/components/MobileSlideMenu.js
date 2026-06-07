@@ -20,12 +20,15 @@ const MobileSlideMenu = () => {
                     <CircleX className="text-orange-300 w-10 h-10" />
                 </div >
                 {navItems.map((item, index) => (
-                    <Link key={index} href={item.path} className="text-orange-300 hover:text-purple-300 p-4">
+                    <Link onClick={openMobileMenuFunction} key={index} href={item.path} className="text-orange-300 hover:text-purple-300 p-4">
                         {item.name}
                     </Link>
                 ))}
                 <div className="ml-4">
-                    <button className="text-sky-950 bg-orang-300 p-2 rounded bg-amber-300 hover:bg-orange-300 cursor-pointer" onClick={openLoginModalFunction}>
+                    <button className="text-sky-950 bg-orang-300 p-2 rounded bg-orange-300 hover:bg-amber-300 cursor-pointer" onClick={() => {
+                        openLoginModalFunction();
+                        openMobileMenuFunction();
+                    }}>
                         Login
                     </button>
                 </div>
