@@ -7,12 +7,12 @@ export const studenstLifeheroPhotos = [
     {
         image: "/studentsLife/img2.jpg",
         top: "top-6",
-        left: "left-38 md:left-80"
+        left: "left-36 md:left-80"
     },
     {
         image: "/studentsLife/img3.jpg",
         top: "top-6",
-        left: "left-63 md:left-125"
+        left: "left-60 md:left-125"
     },
     // ---------------------------------------
     {
@@ -44,11 +44,11 @@ export const studenstLifeheroPhotos = [
     {
         image: "/studentsLife/img9.jpg",
         top: "top-54 md:top-74",
-        left: "left-38 md:left-80"
+        left: "left-37 md:left-80"
     },
     {
         image: "/studentsLife/img10.jpg",
         top: "top-54 md:top-74",
-        left: "left-63 md:left-125"
+        left: "left-61 md:left-125"
     },
 ];
