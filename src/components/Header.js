@@ -24,11 +24,11 @@ const Header = () => {
              <Image src="/header/rfimage2.png" alt="header image" width={100} height={100} className="w-full h-auto object-cover" />
           </div>
         <div className="flex-col items-center text-BlueNavyColor">
-          <h1 className="font-bold md:text-2xl text-sm">
+          <h1 className="md:text-2xl text-sm font-semibold md:font-bold ">
             Shree R. F. Daboo 
           </h1>
           <h1 className="font-bold md:text-2xl text-sm">
-            Education Society(VYARA)
+            Education Society (VYARA)
           </h1>
         </div>
         <HamburgerIcon />
