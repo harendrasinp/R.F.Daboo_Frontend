@@ -4,13 +4,13 @@ import Link from 'next/link';
 const SchoolsListComponent = () => {
     return (
         <>
-            <div className="col-span-3 bg-violet-50 p-2 md:flex md:flex-col md:items-center md:justify-start">
-                <h1 className="text-center bg-orange-300 text-BlueNavyColor p-2 font-bold w-full">OUR SCHOOLS</h1>
+            <div className="col-span-3 bg-violet-100 p-2 md:flex md:flex-col md:items-center md:justify-start">
+                <h1 className="text-center bg-BlueNavyColor text-orange-300 p-2 font-bold w-full">OUR SCHOOLS</h1>
                 {SchoolsList.map((school, index) => (
-                    <div key={index} className="mt-2 text-sm bg-BlueNavyColor p-2 md:w-1/2 md:rounded-lg ">
-                        <div className="flex items-start justify-start text-orange-300">
+                    <div key={index} className="mt-2 text-sm  p-2 md:w-1/2 md:rounded-lg border-b-2 border-dotted border-BlueNavyColor ">
+                        <div className="flex items-start justify-start text-BlueNavyColor">
                             <div>{index + 1}.</div>
-                            <Link href={school.path} className="hover:text-BlueNavyColor hover:underline">
+                            <Link href={school.path} className="hover:text-orange-300 hover:underline">
                                 {school.name}
                             </Link>
                         </div>
