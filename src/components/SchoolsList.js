@@ -4,7 +4,7 @@ import Link from 'next/link';
 const SchoolsListComponent = () => {
     return (
         <>
-            <div className="col-span-3 bg-violet-100 p-2 md:flex md:flex-col md:items-center md:justify-start">
+            <div className="col-span-3 bg-white p-2 md:flex md:flex-col md:items-center md:justify-start">
                 <h1 className="text-center bg-BlueNavyColor text-orange-300 p-2 font-bold w-full">OUR SCHOOLS</h1>
                 {SchoolsList.map((school, index) => (
                     <div key={index} className="mt-2 text-sm  p-2 md:w-1/2 md:rounded-lg border-b-2 border-dotted border-BlueNavyColor ">
