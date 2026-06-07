@@ -1,7 +1,7 @@
 "use client"
 import React, { useState } from 'react'
 import { ChevronDown, ChevronRight } from "lucide-react"
-const ImageDataComponent = ({sideBarData,sidebarTitile}) => {
+const ImageDataComponent = ({ sideBarData, sidebarTitile }) => {
     const [selectedTitle, setSelectedTitle] = useState(null)
     const [selectedYear, setSelectedYear] = useState(null)
     const handleTitleClick = (title) => {
@@ -13,17 +13,17 @@ const ImageDataComponent = ({sideBarData,sidebarTitile}) => {
     }
     return (
         <div className="flex p-2 gap-2">
-            <div className='bg-orange-400 w-1/4 p-2 h-96'>
-                <div className='text-xl font-bold mb-4 text-amber-50 text-center bg-gray-800'>{sidebarTitile}</div>
+            <div className='bg-BlueNavyColor w-1/4 p-2 h-screen'>
+                <div className='text-xl font-bold mb-4 text-amber-50 text-center bg-orange-300'>{sidebarTitile}</div>
                 {sideBarData.map((item, index) => (
                     <div key={index}>
-                        <div onClick={() => handleTitleClick(item.title)} className='cursor-pointer flex'>
+                        <div onClick={() => handleTitleClick(item.title)} className='cursor-pointer flex text-orange-300'>
                             {selectedTitle == item.title ? <ChevronDown className='w-5 h-5' /> : <ChevronRight className='w-5 h-5' />}
                             {item.title}
                         </div>
                         <div className='ml-8'>
                             {selectedTitle == item.title && (
-                                <ul className='list-disc'>
+                                <ul className='list-disc text-orange-300'>
                                     {item.years.map((years, index) => (
                                         <li key={index} onClick={() => handleYearClick(years.year)} className='cursor-pointer hover:text-blue-50 text-sm'>{years.year}</li>
                                     ))}
