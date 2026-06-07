@@ -1,52 +1,54 @@
-export const studenstLifeheroPhotos= [
+export const studenstLifeheroPhotos = [
     {
         image: "/studentsLife/img1.jpg",
         top: "top-6",
-        left: "left-35"
+        left: "left-12 md:left-35"
     },
     {
         image: "/studentsLife/img2.jpg",
-        top: "top-6",   
-        left: "left-80"
+        top: "top-6",
+        left: "left-38 md:left-80"
     },
     {
         image: "/studentsLife/img3.jpg",
         top: "top-6",
-        left: "left-125"
+        left: "left-63 md:left-125"
     },
+    // ---------------------------------------
     {
         image: "/studentsLife/img4.jpg",
-        top: "top-40",
-        left: "left-12"
+        top: "top-30 md:top-40",
+        left: "left-0 md:left-12"
     },
     {
         image: "/studentsLife/img5.jpg",
-        top: "top-40",  
-        left: "left-58"
+        top: "top-30 md:top-40",
+        left: "left-24 md:left-58"
     },
     {
         image: "/studentsLife/img6.jpg",
-        top: "top-40",
-        left: "left-102"
+        top: "top-30 md:top-40",
+        left: "left-48 md:left-102"
     },
     {
         image: "/studentsLife/img7.jpg",
-        top: "top-40",
-        left: "left-148"
+        top: "top-30 md:top-40",
+        left: "left-72 md:left-148"
     },
+    // ---------------------------------------
     {
         image: "/studentsLife/img8.jpeg",
-        top: "top-74",
-        left: "left-35"
+        top: "top-54 md:top-74",
+        left: "left-12 md:left-35"
     },
     {
         image: "/studentsLife/img9.jpg",
-        top: "top-74",
-        left: "left-80"
+        top: "top-54 md:top-74",
+        left: "left-38 md:left-80"
     },
     {
         image: "/studentsLife/img10.jpg",
-        top: "top-74",
-        left: "left-125"
+        top: "top-54 md:top-74",
+        left: "left-63 md:left-125"
     },
-]
+];
