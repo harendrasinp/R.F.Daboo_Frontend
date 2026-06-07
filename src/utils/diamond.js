@@ -4,7 +4,7 @@ const DiamondImage = ({ image }) => {
     w-23 h-23
     md:w-40 md:h-40
     overflow-hidden
-    border-4 border-sky-950/60
+    border-4 border-orange-300
     shadow-lg
     rounded-full
     hover:scale-110
