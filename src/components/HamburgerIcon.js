@@ -1,11 +1,10 @@
 "use client"
-import { useContext } from "react";
-import { ContextAPI } from "../contextAPI/Context";
+import { OpenSlideMenu } from "@/redux/slices/MobileSlidemenuSlice"
+import { useDispatch,useSelector } from "react-redux"
 const HamburgerIcon = () => {
-  const { openMobileMenuFunction,isHambergerOpen } = useContext(ContextAPI);
-  if(isHambergerOpen) return null;
+  const dispatch=useDispatch()
   return (
-    <div onClick={openMobileMenuFunction} className='absolute top-4 right-4 flex flex-col items-center justify-center gap-1 cursor-pointer md:hidden'>
+    <div onClick={()=>dispatch(OpenSlideMenu())}  className='absolute top-4 right-4 flex flex-col items-center justify-center gap-1 cursor-pointer md:hidden'>
         <div className="w-8 h-1 bg-BlueNavyColor"></div>
         <div className="w-8 h-1 bg-BlueNavyColor"></div>
         <div className="w-8 h-1 bg-BlueNavyColor"></div>

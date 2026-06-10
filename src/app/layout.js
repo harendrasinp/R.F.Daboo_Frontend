@@ -1,10 +1,5 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { ContextProvider } from "../contextAPI/Context";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-import LoginModal from "../components/LoginModal";
-import MobileSlideMenu from "../components/MobileSlideMenu";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -28,15 +23,9 @@ export default function RootLayout({ children }) {
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <ContextProvider>
-          <Header />
-          <main className="flex-1">
-            {children}
-          </main>
-          <Footer />
-          <LoginModal />
-          <MobileSlideMenu />
-        </ContextProvider>
+        <main className="flex-1">
+          {children}
+        </main>
       </body>
     </html>
   );

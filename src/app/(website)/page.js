@@ -1,7 +1,7 @@
 import React from 'react'
-import SchoolsListComponent from '../components/SchoolsList'
-import HeroSlider from '../utils/heroImageSlider';
-import {principalData} from '../data/PrincipalData';
+import SchoolsListComponent from '../../components/SchoolsList'
+import HeroSlider from '../../utils/heroImageSlider';
+import {principalData} from '../../data/PrincipalData';
 import Image from 'next/image';
 const Home = () => {
   return (

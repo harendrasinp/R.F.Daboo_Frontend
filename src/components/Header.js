@@ -3,11 +3,11 @@ import { navItems } from "../data/navItems"
 import Link from "next/link"
 import Image from "next/image"
 import HamburgerIcon from "./HamburgerIcon"
-import {useContext} from "react"
-import { ContextAPI } from "../contextAPI/Context"
+import { openLoginModal} from "@/redux/slices/Loginslice"
+import { useDispatch } from "react-redux"
 import Marque from "./Marque"
 const Header = () => {
-  const {openLoginModalFunction } = useContext(ContextAPI);
+  const dispatch=useDispatch()
   return (
     <div className="relative bg-linear-to-r from-white to-orange-300 w-full md:bg-white">
       <div className="flex items-end px-2 py-1">
@@ -36,7 +36,7 @@ const Header = () => {
             {item.name}
           </Link>
         ))}
-        <button onClick={openLoginModalFunction} className="text-white px-3 py-1 rounded hover:text-orange-300 cursor-pointer">
+        <button onClick={()=>dispatch(openLoginModal())} className="text-white px-3 py-1 rounded hover:text-orange-300 cursor-pointer">
           Login
         </button>
       </div>

@@ -1,5 +1,5 @@
 import React from 'react'
-import DiamondImage from '../../utils/diamond';
+import DiamondImage from '@/utils/diamond';
 import Image from 'next/image';
 import { studenstLifeheroPhotos } from '@/data/studenstLife';
 const StudentsLife = () => {

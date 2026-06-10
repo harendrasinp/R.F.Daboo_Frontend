@@ -1,8 +1,8 @@
 import React from 'react'
 import Image from 'next/image';
 import { Square } from "lucide-react"
-import { FacilitiesList } from "../../data/Campus";
-import{CampusImage} from "../../data/Campus";
+import { FacilitiesList } from "@/data/Campus";
+import { CampusImage } from '@/data/Campus';
 const Campus = () => {
     return (
         <div>
