@@ -2,7 +2,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState={
-    isOpenModal:false
+    isOpenModal:false,
 }
 
 const LoginSlice=createSlice({
