@@ -3,7 +3,7 @@ import React from 'react'
 import { LogoutThunk } from '@/redux/thunkAPI/authThunk'
 import { useDispatch } from 'react-redux'
 import { useRouter } from 'next/navigation'
-const Header = () => {
+const AdminHeader = () => {
 
   const dispatch=useDispatch()
   const router=useRouter()
@@ -27,4 +27,4 @@ const Header = () => {
   )
 }
 
-export default Header
+export default AdminHeader
