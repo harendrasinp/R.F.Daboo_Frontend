@@ -1,4 +1,4 @@
-import Header from "@/admin_components/Header"
+import Header from "@/admin_components/header"
 const Admin_Layout=({children})=>{
     return(
         <div>
