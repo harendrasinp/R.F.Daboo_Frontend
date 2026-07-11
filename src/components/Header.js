@@ -8,7 +8,6 @@ import {TextAlignJustify} from "lucide-react"
 import Marque from "./Marque"
 import MobileSlideMenu from "./MobileSlideMenu"
 import { useState } from "react"
-import LoginModal from "./LoginModal"
 
 const Header = () => {
   // -----------------------------States-------------------------------

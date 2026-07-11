@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 import { loginThunk } from "../thunkAPI/authThunk";
 const initialState={
     pending:false,
-    adminName:null,
+    adminData:null,
     error:null
 }
 
@@ -18,11 +18,13 @@ const authenticationSlice=createSlice({
 
       .addCase(loginThunk.fulfilled,(state,action)=>{
         state.pending=false,
-        state.adminName=action.payload.username
+        state.adminData=action.payload
+
+        state.error=null
       })
       .addCase(loginThunk.rejected,(state,action)=>{
         state.pending=false,
-        state.error=action.payload.message
+        state.error=action.payload
       })
    
   }

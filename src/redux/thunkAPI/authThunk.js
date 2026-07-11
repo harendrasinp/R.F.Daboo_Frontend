@@ -7,8 +7,6 @@ export const loginThunk=createAsyncThunk(
         try{
             const response=await axios.post("http://localhost:4545/admin/Login",adminData,
                 {withCredentials: true})
-            
-            console.log(response.data);
             return response.data
             
         }

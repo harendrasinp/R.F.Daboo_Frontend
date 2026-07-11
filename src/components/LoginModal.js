@@ -8,7 +8,7 @@ const LoginModal = () => {
     const dispatch = useDispatch()
     const router=useRouter()
     const [formData, setFormData] = useState({ email: "", password: "" })
-
+    const authDatas=useSelector((state)=>state.auth)
     const isOpenmodal = useSelector((state) => state.login.isOpenModal)
 
     const handleChange = (e) => {
@@ -22,6 +22,8 @@ const LoginModal = () => {
             router.replace("/admin");
         }
         setFormData({ email: "", password: "" })
+
+
     }
 
     if (!isOpenmodal) return null;
@@ -62,6 +64,7 @@ const LoginModal = () => {
                             Login
                         </button>
                     </form>
+                    {authDatas.pending? "Loading......" :authDatas.error}
                 </div>
             </div>
         </div>
