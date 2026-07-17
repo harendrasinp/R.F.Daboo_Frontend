@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { UploadImageThunk, DrowpDownThunk, GetDrowpDownListThunk, GetImageDataThunk, GetUYearThunk, GetUYearImage, getAllImageThunk, deleteImageThunk } from "../thunkAPI/GalleryThunk";
+import { UploadImageThunk, DrowpDownThunk, GetDrowpDownListThunk, GetImageDataThunk, GetUYearThunk, GetUYearImage, getAllImageThunk, deleteImageThunk, EditDrowpDownThunk } from "../thunkAPI/GalleryThunk";
 const initialState = {
     loading: false,
     statusMessage: null,
@@ -11,7 +11,8 @@ const initialState = {
         EventName: [],
         EventYear: [],
         EventImage: [],
-        EventAllImage: []
+        EventAllImage: [],
+        EventEditer:[]
     }
 }
 
@@ -129,6 +130,10 @@ const gallerySliec = createSlice({
             // ---------------------------Delete thunk-----------------------------------
             .addCase(deleteImageThunk.pending,(state)=>{
                 state.loading=true
+            })
+            // ---------------------------EditEventNameThunk-----------------------------
+            .addCase(EditDrowpDownThunk.fulfilled,(state,action)=>{
+                state.DropDownListItem=action.payload.data
             })
     }
 })

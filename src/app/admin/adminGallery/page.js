@@ -34,7 +34,6 @@ const AdminGallery = () => {
         if (toggleButton){
             settoggleButton(false)
             await dispatch(EditDrowpDownThunk({"oldName":editEvent,"newName":editValue}))
-            dispatch(GetDrowpDownListThunk());
         }
         else{
             settoggleButton(true)
