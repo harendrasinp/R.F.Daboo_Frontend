@@ -1,6 +1,6 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
-
+// --------------------------------DropDownList Thunks-----------------------------------
 export const DrowpDownThunk = createAsyncThunk(
     "dropDown/item",
     async (itemName, thunkAPI) => {
@@ -8,26 +8,6 @@ export const DrowpDownThunk = createAsyncThunk(
             const response = await axios.post("http://localhost:4545/admin/dropdowItem", { itemName })
             return response.data
 
-        } catch (error) {
-            return thunkAPI.rejectWithValue(
-                error.response?.data
-            )
-        }
-    }
-)
-export const UploadImageThunk = createAsyncThunk(
-    "upload/imageFile",
-    async (fileData, thunkAPI) => {
-        try {
-            const response = await axios.post("http://localhost:4545/admin/uploadImage",
-                fileData,
-                {
-                    headers: {
-                        "Content-Type": "multipart/form-data",
-                    },
-                }
-            )
-            return response.data
         } catch (error) {
             return thunkAPI.rejectWithValue(
                 error.response?.data
@@ -48,6 +28,51 @@ export const GetDrowpDownListThunk = createAsyncThunk(
         }
     }
 )
+export const EditDrowpDownThunk = createAsyncThunk(
+    "EditeEvent/item",
+    async (EditEvent, thunkAPI) => {
+        try {
+            const response = await axios.post("http://localhost:4545/admin/editdropdowItem", EditEvent )
+            return response.data
+
+        } catch (error) {
+            return thunkAPI.rejectWithValue(
+                error.response?.data
+            )
+        }
+    }
+)
+export const DeleteEventThunk = createAsyncThunk("delete/event",async(eventName,thunkAPI)=>{
+    try{
+        const response=await axios.post("http://localhost:4545/admin/DeleteEvent",{eventName})
+        return response.data
+    }catch(error){
+        return thunkAPI.rejectWithValue(error.response.data)
+    }
+}
+)
+// -----------------------Image Related Thunk-----------------------------------------
+export const UploadImageThunk = createAsyncThunk(
+    "upload/imageFile",
+    async (fileData, thunkAPI) => {
+        try {
+            const response = await axios.post("http://localhost:4545/admin/uploadImage",
+                fileData,
+                {
+                    headers: {
+                        "Content-Type": "multipart/form-data",
+                    },
+                }
+            )
+            return response.data
+        } catch (error) {
+            return thunkAPI.rejectWithValue(
+                error.response?.data
+            )
+        }
+    }
+)
+
 
 export const GetImageDataThunk = createAsyncThunk(
     "get/imageData",
@@ -80,7 +105,7 @@ export const GetUYearImage = createAsyncThunk(
     async (fetchImageInfo, thunkAPI) => {
         console.log(fetchImageInfo)
         try {
-            const response = await axios.post("http://localhost:4545/admin/getYearImage",fetchImageInfo)
+            const response = await axios.post("http://localhost:4545/admin/getYearImage", fetchImageInfo)
             return response.data
         } catch (error) {
             return thunkAPI.rejectWithValue(
@@ -93,7 +118,7 @@ export const getAllImageThunk = createAsyncThunk(
     "get/allImages",
     async (editImageInfo, thunkAPI) => {
         try {
-            const response = await axios.post("http://localhost:4545/admin/getEditImages",editImageInfo)
+            const response = await axios.post("http://localhost:4545/admin/getEditImages", editImageInfo)
             return response.data
         } catch (error) {
             return thunkAPI.rejectWithValue(
@@ -101,8 +126,8 @@ export const getAllImageThunk = createAsyncThunk(
             )
         }
     }
-)   
-export const deleteImageThunk= createAsyncThunk(
+)
+export const deleteImageThunk = createAsyncThunk(
     "delete/image",
     async (imageId, thunkAPI) => {
         try {
