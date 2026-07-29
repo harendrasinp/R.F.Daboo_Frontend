@@ -4,13 +4,15 @@ import authenticationReducer from "@/redux/slices/authenticationSlice"
 import AboutUsNewData from "@/redux/slices/AboutUsPostDataSlice"
 import AboutUsGetData from "@/redux/slices/aboutUsGetDataSlice" 
 import galleryReducer from "@/redux/slices/GallerySlice" 
+import contactSlice from "@/redux/slices/contactSlice"
 const store=configureStore({
   reducer:{
     login:LoginReducer,
     auth:authenticationReducer,
     aboutData:AboutUsNewData,
     getAboutData:AboutUsGetData,
-    gallery:galleryReducer
+    gallery:galleryReducer,
+    ContactUs:contactSlice
   }
 })
 export default store

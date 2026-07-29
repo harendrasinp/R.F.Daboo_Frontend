@@ -1,6 +1,16 @@
-import React from 'react'
-import { phoneNumbers, contactData } from '@/data/contactData';
+"use client"
+import{ useEffect } from 'react'
+import { phoneNumbers} from '@/data/contactData';
+import {GetContacUsThunk,GetPhonesNoThunk} from "@/redux/thunkAPI/ContactThunk"
+import { useDispatch, useSelector } from 'react-redux';
 const Contact = () => {
+  const {loading,message,error,responseData}=useSelector((state)=>state.ContactUs)  
+  const {phoneNo}=useSelector((state)=>state.ContactUs.phones)  
+  const dispatch=useDispatch()
+  useEffect(()=>{
+      dispatch(GetContacUsThunk())
+      dispatch(GetPhonesNoThunk())
+  },[])
   return (
     <div>
       <div className="bg-BlueNavyColor text-center py-2 text-orange-300">
@@ -10,17 +20,13 @@ const Contact = () => {
       <div className="w-full flex flex-col gap-4 p-5">
 
         <div className="w-full md:flex justify-center items-center gap-2">
-          <aside className="w-full bg-violet-50 p-4 text-gray-800">
+          <aside className="w-full h-79 bg-violet-50 p-4 text-gray-800">
             <h1 className="text-center bg-gray-800 text-orange-300 p-2 mb-4">OUR ADDRESS</h1>
-            <div>
-              {contactData.map((data, index) => (
-                <div key={index} className="p-2" >
-                  <h2 className="text-lg font-bold">{data.title}</h2>
-                  <p className="text-gray-700">{data.data}</p>
-                </div>
-              ))}
+            <div className='flex flex-col gap-8'>
+                  <h2 className="text-lg font-bold">Address: <span className='font-normal'>{responseData?.data?.Address}</span></h2>
+                  <h2 className="text-lg font-bold">Office Phone: <span className='font-normal'>{responseData?.data?.OfficePhone}</span></h2>
+                  <h2 className="text-lg font-bold">Email: <span className='font-normal'>{responseData?.data?.Email}</span></h2>
             </div>
-
           </aside>
 
           <main className="w-full bg-violet-50 p-4">
@@ -49,13 +55,13 @@ const Contact = () => {
               </tr>
             </thead>
             <tbody className="text-gray-800 text-center">
-              {phoneNumbers.map((phone, index) => (
+              {phoneNo?.map((data, index) => (
                 <tr key={index}>
-                  <td className="border border-gray-300 p-2">{phone.name}</td>
-                  <td className="border border-gray-300 p-2">{phone.number}</td>
+                  <td className="border border-gray-300 p-2">{data.OfficeName}</td>
+                  <td className="border border-gray-300 p-2">{data.ContactNumber}</td>
                 </tr>
               ))}
-            </tbody>
+            </tbody> 
           </table>
         </div>
       </div>
