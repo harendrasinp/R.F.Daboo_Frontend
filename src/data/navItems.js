@@ -4,8 +4,7 @@
     { name: "Awards", path: "/awards", adminPath:"/admin/" },
     { name: "Campus", path: "/campus", adminPath:"/admin" },
     { name: "Student Life", path: "/studentLife", adminPath:"/admin" },
-    { name: "Contact Us", path: "/contact", adminPath:"/admin" },
+    { name: "Contact Us", path: "/contact", adminPath:"/admin/adminContact" },
     { name: "Academics", path: "/academics", adminPath:"/admin" },
-    { name: "Events", path: "/events", adminPath:"/admin"},
     { name: "Gallery", path: "/gallery", adminPath:"/admin/adminGallery" },
   ];

@@ -8,7 +8,6 @@ import Link from 'next/link'
 const AdminHeader = () => {
   const { adminData } = useSelector((state) => state.auth)
   const username = adminData?.responseData?.username
-  console.log(username)
   const dispatch = useDispatch()
   const router = useRouter()
 
