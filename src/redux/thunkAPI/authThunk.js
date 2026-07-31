@@ -1,11 +1,11 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
-
+import{API_URL} from "@/utils/api.js"
 export const loginThunk=createAsyncThunk(
     "auth/login",
     async(adminData,thunkAPI)=>{
         try{
-            const response=await axios.post("http://localhost:4545/admin/Login",adminData,
+            const response=await axios.post(`${API_URL}/admin/Login`,adminData,
                 {withCredentials: true})
             return response.data
             
@@ -22,7 +22,7 @@ export const LogoutThunk=createAsyncThunk(
     "auth/logout",
     async(_,thunkAPI)=>{
         try{
-            const response=await axios.post("http://localhost:4545/admin/Logout",
+            const response=await axios.post(`${API_URL}/admin/Logout`,
                 {},
                 { withCredentials: true })
                  return response.data; 

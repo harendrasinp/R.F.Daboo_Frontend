@@ -8,17 +8,17 @@ const Marque = () => {
                 initial={{ x: "100vw" }}
                 animate={{ x: "-100vw" }}
                 transition={{
-                    duration: 15,
+                    duration:25,
                     ease: "linear",
                     repeat: Infinity,
 
                 }}
                 className="whitespace-nowrap text-[0.8rem] text-gray-800 flex items-center justify-center gap-2"
             >
-                <Phone className="w-5 h-5 text-BlueNavyColor" />
-                <span>+91 12345 67890, +91 12345 67890</span>
-                <Mail className="w-5 h-5 text-BlueNavyColor" />
-                <span>info@RfDaboo.com</span>
+                <Phone className="w-5 h-5 text-white" />
+                <span className=" text-orange-400" >+91 12345 67890, +91 12345 67890</span>
+                <Mail className="w-5 h-5 text-white" />
+                <span className=" text-orange-400" >info@RfDaboo.com</span>
             </motion.h1>
         </div>
     )
