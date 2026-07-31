@@ -1,11 +1,12 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
+import{API_URL} from "@/utils/api.js"
 // -----------------------add New AboutUs Data-----------------------------------------------
 export const postAboutUsThunk = createAsyncThunk(
     "aboutUs/newData",
     async (AboutUsData, thunkAPI) => {
         try {
-            const response = await axios.post("http://localhost:4545/admin/aboutUsNewData",
+            const response = await axios.post(`${API_URL}/admin/aboutUsNewData`,
                 AboutUsData,
                 { withCredentials: true })
 
@@ -24,7 +25,7 @@ export const getAboutUsThunk = createAsyncThunk(
     async (_, thunkAPI) => {
         try {
             const response = await axios.get(
-                "http://localhost:4545/admin/getAboutUsData"
+                `${API_URL}/admin/getAboutUsData`
             );
           
 
@@ -41,7 +42,7 @@ export const UpdateAboutUsDataThunk = createAsyncThunk(
     "aboutUs/EditIteme",
     async (EditData, thunkAPI) => {
         try {
-            const response = await axios.put("http://localhost:4545/admin/UpdateaboutUsData",
+            const response = await axios.put(`${API_URL}/admin/UpdateaboutUsData`,
                 {
                     id: EditData.id,
                     data: EditData.data
@@ -61,7 +62,7 @@ export const DeleteAboutUsItemThunk = createAsyncThunk(
     async (deletId, thunkAPI) => {
         try {
             const response = await axios.post(
-                "http://localhost:4545/admin/DeleteAboutUsItem",
+                `${API_URL}/admin/DeleteAboutUsItem`,
                 { Id: deletId }
             );
 
