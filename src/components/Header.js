@@ -25,7 +25,7 @@ const Header = () => {
   // }
 // ----------------------------------------Return-----------------------------------------
   return (
-    <div className="relative bg-[url('/header/headerbg1.png')] bg-cover bg-center w-full md:bg-white">
+    <div className="relative bg-[url('/header/headerbg1.png')] bg-cover bg-no-repeat bg-center w-full md:bg-white">
       <div className="flex items-end px-2 py-1">
         <div className="flex items-end px-4 md:py-2 w-25 h-25 md:w-35 md:h-35">
           <Image
