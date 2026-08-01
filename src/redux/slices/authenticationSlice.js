@@ -6,6 +6,7 @@ const initialState = {
   adminData: null,
   error: null,
   isAuthenticated: false,
+  authChecked: false
 };
 
 const authenticationSlice = createSlice({
@@ -42,12 +43,14 @@ const authenticationSlice = createSlice({
       .addCase(authCheckThunk.fulfilled, (state, action) => {
         state.pending = false;
         state.isAuthenticated = true;
+        state.authChecked=true;
         state.adminData = action.payload.admin;
       })
 
       .addCase(authCheckThunk.rejected, (state) => {
         state.pending = false;
         state.isAuthenticated = false;
+        state.authChecked=true;
         state.adminData = null;
       });
   },

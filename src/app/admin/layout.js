@@ -10,19 +10,19 @@ const Admin_Layout = ({ children }) => {
   const dispatch = useDispatch();
   const router = useRouter();
 
-  const { pending, isAuthenticated } = useSelector((state) => state.auth);
+  const {isAuthenticated,authChecked  } = useSelector((state) => state.auth);
 
   useEffect(() => {
     dispatch(authCheckThunk());
   }, [dispatch]);
 
   useEffect(() => {
-    if (!pending && !isAuthenticated) {
+    if (!authChecked && !isAuthenticated) {
       router.replace("/");
     }
-  }, [pending, isAuthenticated, router]);
+  }, [authChecked, isAuthenticated, router]);
 
-  if (pending) {
+  if (authChecked ) {
     return (
       <div className="flex justify-center items-center h-screen">
         Loading...
