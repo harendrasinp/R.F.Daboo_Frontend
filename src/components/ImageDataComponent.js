@@ -5,7 +5,6 @@ import { useDispatch, useSelector } from 'react-redux'
 import { GetUYearImage, GetUYearThunk } from '@/redux/thunkAPI/GalleryThunk'
 import { yearRemover } from '@/redux/slices/GallerySlice'
 const ImageDataComponent = ({ sideBarData, sidebarTitile }) => {
-    const [eventName, setEventName] = useState("")
     const [openEvent, setOpenEvent] = useState(null)
     const EventData = useSelector((state) => state.gallery.gallery)
     const dispatch = useDispatch()
@@ -23,7 +22,7 @@ const ImageDataComponent = ({ sideBarData, sidebarTitile }) => {
         dispatch(GetUYearImage({ EventName, selecterYear }))
     }
     return (
-        <div className='p-5 flex gap-2'>
+        <div className='p-2 flex gap-2'>
             {/* -----------------------------------Side Bar Area-----------------------------------*/}
             <div className='flex flex-col gap-2 bg-BlueNavyColor w-1/6 min-h-screen p-1'>
                 <div className='flex items-center justify-center gap-2 bg-orange-300'>
