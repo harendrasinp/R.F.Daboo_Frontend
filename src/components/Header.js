@@ -20,12 +20,12 @@ const Header = () => {
     setIsOpenMobileMenu(!isOpenMobileMenu)
   }
 // -------------------------------Login Modal Open Close Function---------------------------
-  const LoginModalFunction=()=>{
-    setIsOpenLogin(!isOpenLogin)
-  }
+  // const LoginModalFunction=()=>{
+  //   setIsOpenLogin(!isOpenLogin)
+  // }
 // ----------------------------------------Return-----------------------------------------
   return (
-    <div className="relative bg-linear-to-r from-white to-gray-500 w-full md:bg-white">
+    <div className="relative bg-[url('/header/headerbg1.png')] bg-cover bg-center w-full md:bg-white">
       <div className="flex items-end px-2 py-1">
         <div className="flex items-end px-4 md:py-2 w-25 h-25 md:w-35 md:h-35">
           <Image

@@ -98,7 +98,6 @@ export const GetUYearThunk = createAsyncThunk(
 export const GetUYearImage = createAsyncThunk(
     "get/yearImage",
     async (fetchImageInfo, thunkAPI) => {
-        console.log(fetchImageInfo)
         try {
             const response = await CredentialsApi.post("/admin/getYearImage", fetchImageInfo)
             return response.data
