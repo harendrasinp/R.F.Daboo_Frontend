@@ -10,9 +10,7 @@ const Admin_Layout = ({ children }) => {
   const dispatch = useDispatch();
   const router = useRouter();
 
-  const { pending, isAuthenticated } = useSelector(
-    (state) => state.auth
-  );
+  const { pending, isAuthenticated } = useSelector((state) => state.auth);
 
   useEffect(() => {
     dispatch(authCheckThunk());
