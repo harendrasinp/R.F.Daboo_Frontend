@@ -26,6 +26,7 @@ const authenticationSlice = createSlice({
         state.pending = false;
         state.adminData = action.payload;
         state.isAuthenticated = true;
+        state.authChecked = true;
         state.error = null;
       })
 

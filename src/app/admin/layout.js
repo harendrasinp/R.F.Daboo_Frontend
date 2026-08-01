@@ -17,12 +17,12 @@ const Admin_Layout = ({ children }) => {
   }, [dispatch]);
 
   useEffect(() => {
-    if (!authChecked && !isAuthenticated) {
+    if (authChecked && !isAuthenticated) {
       router.replace("/");
     }
   }, [authChecked, isAuthenticated, router]);
 
-  if (authChecked ) {
+  if (!authChecked ) {
     return (
       <div className="flex justify-center items-center h-screen">
         Loading...
