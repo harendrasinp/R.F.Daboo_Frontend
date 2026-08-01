@@ -1,13 +1,14 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
-import {API_URL } from "@/utils/api.js"
+import CredentialsApi from "@/utils/credentialsApi.js"
+import { API_URL } from "@/utils/api";
 
 
 export const ContactUsDataThunk=createAsyncThunk(
     "contacUst/Data",
     async(ContactUstData,thunkAPI)=>{
         try{
-            const response=await axios.post(`${API_URL}/admin/ContactUsData`,ContactUstData)
+            const response=await CredentialsApi.post("/admin/ContactUsData",ContactUstData)
             return response.data
         }catch(error){
             return thunkAPI.rejectWithValue(
@@ -21,7 +22,7 @@ export const ContactsThunk=createAsyncThunk(
     async(ContactstData,thunkAPI)=>{
         console.log(ContactstData)
         try{
-            const response=await axios.post(`${API_URL}/admin/ContactData`,ContactstData)
+            const response=await CredentialsApi.post("/admin/ContactData",ContactstData)
             return response.data
         }catch(error){
             return thunkAPI.rejectWithValue(
@@ -75,7 +76,7 @@ export const DeleteContactFromListThunk=createAsyncThunk(
     "DeletePhoneFromPhonesList/Data",
     async(phoneId,thunkAPI)=>{
         try{
-            const response=await axios.post(`${API_URL}/admin/DeletePhoneFromList`,{phoneId:phoneId})
+            const response=await CredentialsApi.post("/admin/DeletePhoneFromList", {phoneId:phoneId})
             console.log(response.data)
             return response.data
         }catch(error){
@@ -90,7 +91,7 @@ export const UpdatePhoneNoList=createAsyncThunk(
     async(UpdatePhoneNo,thunkAPI)=>{
         console.log(UpdatePhoneNo)
         try{
-            const response=await axios.post(`${API_URL}/admin/UpdatePhoneList`,UpdatePhoneNo)
+            const response=await CredentialsApi.post("/admin/UpdatePhoneList", UpdatePhoneNo)
             return response.data
         }catch(error){
             return thunkAPI.rejectWithValue(

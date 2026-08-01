@@ -1,12 +1,25 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import axios from "axios";
-import{API_URL} from "@/utils/api.js"
+import CredentialsApi from "@/utils/credentialsApi.js"
+
+export const authCheckThunk = createAsyncThunk(
+  "auth/check",
+  async (_, thunkAPI) => {
+    try {
+      const response = await CredentialsApi.get("/admin/dashboard");
+      return response.data;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(
+        error.response?.data?.message
+      );
+    }
+  }
+);
+
 export const loginThunk=createAsyncThunk(
     "auth/login",
     async(adminData,thunkAPI)=>{
         try{
-            const response=await axios.post(`${API_URL}/admin/Login`,adminData,
-                {withCredentials: true})
+            const response=await CredentialsApi.post("/admin/Login",adminData,)
             return response.data
             
         }
@@ -22,10 +35,8 @@ export const LogoutThunk=createAsyncThunk(
     "auth/logout",
     async(_,thunkAPI)=>{
         try{
-            const response=await axios.post(`${API_URL}/admin/Logout`,
-                {},
-                { withCredentials: true })
-                 return response.data; 
+            const response=await CredentialsApi.post("/admin/Logout",{},)
+                return response.data; 
         }
         catch(error){
             return thunkAPI.rejectWithValue(

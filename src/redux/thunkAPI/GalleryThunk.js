@@ -1,12 +1,13 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
-import {API_URL} from "@/utils/api.js"
+import CredentialsApi from "@/utils/credentialsApi.js"
+import { API_URL } from "@/utils/api";
 // --------------------------------DropDownList Thunks-----------------------------------
 export const DrowpDownThunk = createAsyncThunk(
     "dropDown/item",
     async (itemName, thunkAPI) => {
         try {
-            const response = await axios.post(`${API_URL}/admin/dropdowItem`, { itemName })
+            const response = await CredentialsApi.post("/admin/dropdowItem", { itemName })
             return response.data
 
         } catch (error) {
@@ -33,7 +34,7 @@ export const EditDrowpDownThunk = createAsyncThunk(
     "EditeEvent/item",
     async (EditEvent, thunkAPI) => {
         try {
-            const response = await axios.post(`${API_URL}/admin/editdropdowItem`, EditEvent )
+            const response = await CredentialsApi.post("/admin/editdropdowItem", EditEvent )
             return response.data
 
         } catch (error) {
@@ -45,7 +46,7 @@ export const EditDrowpDownThunk = createAsyncThunk(
 )
 export const DeleteEventThunk = createAsyncThunk("delete/event",async(eventName,thunkAPI)=>{
     try{
-        const response=await axios.post(`${API_URL}/admin/DeleteEvent`,{eventName})
+        const response=await CredentialsApi.post("/admin/DeleteEvent",{eventName})
         return response.data
     }catch(error){
         return thunkAPI.rejectWithValue(error.response.data)
@@ -57,14 +58,7 @@ export const UploadImageThunk = createAsyncThunk(
     "upload/imageFile",
     async (fileData, thunkAPI) => {
         try {
-            const response = await axios.post(`${API_URL}/admin/uploadImage`,
-                fileData,
-                {
-                    headers: {
-                        "Content-Type": "multipart/form-data",
-                    },
-                }
-            )
+            const response = await CredentialsApi.post("/admin/uploadImage", fileData)
             return response.data
         } catch (error) {
             return thunkAPI.rejectWithValue(
@@ -106,7 +100,7 @@ export const GetUYearImage = createAsyncThunk(
     async (fetchImageInfo, thunkAPI) => {
         console.log(fetchImageInfo)
         try {
-            const response = await axios.post(`${API_URL}/admin/getYearImage`, fetchImageInfo)
+            const response = await CredentialsApi.post("/admin/getYearImage", fetchImageInfo)
             return response.data
         } catch (error) {
             return thunkAPI.rejectWithValue(
@@ -119,7 +113,7 @@ export const getAllImageThunk = createAsyncThunk(
     "get/allImages",
     async (editImageInfo, thunkAPI) => {
         try {
-            const response = await axios.post(`${API_URL}/admin/getEditImages`, editImageInfo)
+            const response = await CredentialsApi.post("/admin/getEditImages", editImageInfo)
             return response.data
         } catch (error) {
             return thunkAPI.rejectWithValue(
@@ -132,7 +126,7 @@ export const deleteImageThunk = createAsyncThunk(
     "delete/image",
     async (imageId, thunkAPI) => {
         try {
-            const response = await axios.delete(`${API_URL}/admin/deleteImage/${imageId}`)
+            const response = await CredentialsApi.delete(`/admin/deleteImage/${imageId}`)
             return response.data
         } catch (error) {
             return thunkAPI.rejectWithValue(

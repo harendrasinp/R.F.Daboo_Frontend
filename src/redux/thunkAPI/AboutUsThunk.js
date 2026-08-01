@@ -1,14 +1,13 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
-import{API_URL} from "@/utils/api.js"
+import CredentialsApi from "@/utils/credentialsApi.js"
+import { API_URL } from "@/utils/api";
 // -----------------------add New AboutUs Data-----------------------------------------------
 export const postAboutUsThunk = createAsyncThunk(
     "aboutUs/newData",
     async (AboutUsData, thunkAPI) => {
         try {
-            const response = await axios.post(`${API_URL}/admin/aboutUsNewData`,
-                AboutUsData,
-                { withCredentials: true })
+            const response = await CredentialsApi.post("/admin/aboutUsNewData", AboutUsData);
 
             return response.data;
         }
@@ -42,7 +41,7 @@ export const UpdateAboutUsDataThunk = createAsyncThunk(
     "aboutUs/EditIteme",
     async (EditData, thunkAPI) => {
         try {
-            const response = await axios.put(`${API_URL}/admin/UpdateaboutUsData`,
+            const response = await CredentialsApi.put("/admin/UpdateaboutUsData",
                 {
                     id: EditData.id,
                     data: EditData.data
@@ -61,11 +60,7 @@ export const DeleteAboutUsItemThunk = createAsyncThunk(
     "aboutUs/DeleteIteme",
     async (deletId, thunkAPI) => {
         try {
-            const response = await axios.post(
-                `${API_URL}/admin/DeleteAboutUsItem`,
-                { Id: deletId }
-            );
-
+            const response = await CredentialsApi.post("/admin/DeleteAboutUsItem", { Id: deletId });
 
             return response.data;
         } catch (error) {
