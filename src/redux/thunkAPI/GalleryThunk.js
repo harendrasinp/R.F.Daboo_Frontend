@@ -69,11 +69,26 @@ export const UploadImageThunk = createAsyncThunk(
 )
 
 
-export const GetImageDataThunk = createAsyncThunk(
-    "get/imageData",
+export const GetEventTitleThunk = createAsyncThunk(
+    "get/eventTitle",
     async (_, thunkAPI) => {
         try {
-            const response = await axios.get(`${API_URL}/admin/getImageData`)
+            const response = await axios.get(`${API_URL}/admin/getEventTitle`)
+            console.log("response", response.data)
+            return response.data
+        } catch (error) {
+            return thunkAPI.rejectWithValue(
+                error.response?.data
+            )
+        }
+    }
+)
+export const GetImageDataForTitleOfGallery = createAsyncThunk(
+    "get/titleImage",
+    async (_, thunkAPI) => {
+        try {
+            const response = await axios.get(`${API_URL}/admin/getTitleImage`)
+            console.log("response", response.data)
             return response.data
         } catch (error) {
             return thunkAPI.rejectWithValue(

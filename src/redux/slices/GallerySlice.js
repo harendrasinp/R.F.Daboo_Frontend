@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { UploadImageThunk, DrowpDownThunk, GetDrowpDownListThunk, GetImageDataThunk, GetUYearThunk, GetUYearImage, getAllImageThunk, deleteImageThunk, EditDrowpDownThunk } from "../thunkAPI/GalleryThunk";
+import { UploadImageThunk, DrowpDownThunk, GetDrowpDownListThunk, GetEventTitleThunk, GetUYearThunk, GetUYearImage, getAllImageThunk, deleteImageThunk, EditDrowpDownThunk, GetImageDataForTitleOfGallery } from "../thunkAPI/GalleryThunk";
 const initialState = {
     loading: false,
     statusMessage: null,
@@ -8,6 +8,7 @@ const initialState = {
     DropDownListItem: null,
     // -----------Image Data states-------------
     gallery: {
+        EventTitleData:[],
         EventName: [],
         EventYear: [],
         EventImage: [],
@@ -76,15 +77,15 @@ const gallerySliec = createSlice({
                     state.errorMessage = action.payload
             })
             // --------------------GetImageDataThunk------------------------------------
-            .addCase(GetImageDataThunk.pending, (state) => {
+            .addCase(GetImageDataForTitleOfGallery.pending, (state) => {
                 state.loading = true
             })
-            .addCase(GetImageDataThunk.fulfilled, (state, action) => {
+            .addCase(GetImageDataForTitleOfGallery.fulfilled, (state, action) => {
                 state.loading = false
                 state.errorMessage = null
-                state.gallery.EventName = action.payload
+                state.gallery.EventTitleData = action.payload
             })
-            .addCase(GetImageDataThunk.rejected, (state, action) => {
+            .addCase(GetImageDataForTitleOfGallery.rejected, (state, action) => {
                 state.loading = false
                 state.errorMessage = action.payload
             })
