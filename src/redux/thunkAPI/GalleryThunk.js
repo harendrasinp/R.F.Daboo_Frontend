@@ -88,7 +88,6 @@ export const GetImageDataForTitleOfGallery = createAsyncThunk(
     async (_, thunkAPI) => {
         try {
             const response = await axios.get(`${API_URL}/admin/getTitleImage`)
-            console.log("response", response.data)
             return response.data
         } catch (error) {
             return thunkAPI.rejectWithValue(
@@ -102,6 +101,7 @@ export const GetUYearThunk = createAsyncThunk(
     async (Event, thunkAPI) => {
         try {
             const response = await axios.get(`${API_URL}/admin/getYear/${Event}`)
+            console.log(response.data)
             return response.data
         } catch (error) {
             return thunkAPI.rejectWithValue(
@@ -126,6 +126,7 @@ export const GetUYearImage = createAsyncThunk(
 export const getAllImageThunk = createAsyncThunk(
     "get/allImages",
     async (editImageInfo, thunkAPI) => {
+        
         try {
             const response = await CredentialsApi.post("/admin/getEditImages", editImageInfo)
             return response.data
