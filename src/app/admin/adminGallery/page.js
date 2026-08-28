@@ -77,8 +77,11 @@ const AdminGallery = () => {
         }
     }
     const handleDeleteEvent = async (eventName) => {
-        await dispatch(DeleteEventThunk(eventName))
-        dispatch(GetDrowpDownListThunk())
+        const confirmDelete = window.confirm(`Are you sure you want to delete the event: ${eventName}? This action cannot be undone.`);
+        if (confirmDelete) {
+            await dispatch(DeleteEventThunk(eventName))
+            dispatch(GetDrowpDownListThunk())
+        }
     }
     return (
         <div className='bg-blue-950 w-full min-h-screen flex flex-col gap-2'>
