@@ -5,6 +5,6 @@
     { name: "Campus", path: "/campus", adminPath:"/admin" },
     { name: "Student Life", path: "/studentLife", adminPath:"/admin" },
     { name: "Contact Us", path: "/contact", adminPath:"/admin/adminContact" },
-    { name: "Academics", path: "/academics", adminPath:"/admin" },
+    { name: "Notice", path: "/Notice", adminPath:"/admin/Notice" },
     { name: "Gallery", path: "/gallery", adminPath:"/admin/adminGallery" },
   ];

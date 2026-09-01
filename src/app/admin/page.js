@@ -39,12 +39,7 @@ export default function PrincipalThoughtForm() {
       formData.append("thought", thought);
       formData.append("image", image);
 
-      // const response = await axios.post(
-      //   "http://localhost:4545/api/home/principal-thought",
-      //   formData
-      // );
-
-      // console.log(response.data);
+   
       const response = await principalAPI(formData);
 
       if (response.success) {
